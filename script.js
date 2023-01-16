@@ -33,7 +33,7 @@ function getList(rates) {
         const li = document.createElement("li")
         // remove last character from currency to get country code
         const country = item.slice(0, -1)
-        li.innerHTML = `<img src="https://countryflagsapi.com/png/${country}" alt="" />
+        li.innerHTML = `<img src="https://countryflagsapi.com/png/${country}" alt="" crossorigin="anonymous"/>
         <span>${item}</span>`
 
         //add eventListener on li 
@@ -42,7 +42,7 @@ function getList(rates) {
         //select parent of li which is ul and then parent of ul select then child of select span and change its content with item
         li.parentElement.parentElement.querySelector('span').innerHTML = item
         //same for country flag
-        li.parentElement.parentElement.querySelector('img').src = `
+        li.parentElement.parentElement.querySelector('img').src = crossorigin="anonymous"`
         https://countryflagsapi.com/png/${country}
         
         `
